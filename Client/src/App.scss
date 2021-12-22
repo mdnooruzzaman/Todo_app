@@ -1,0 +1,36 @@
+.App{
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+  input{
+    border-radius: 0.3rem;
+    box-shadow: none;
+    background-color: rgb(238, 230, 230);
+    width: 25rem;
+    height: 2.5rem;
+    margin-right: 1.5%;
+    border: none;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 3%;
+  }
+ 
+}
+.head{
+  display: flex;
+  justify-content: center;
+  
+}
+.button1{
+  width: 6.5rem;
+  height: 2.5rem;
+  font-size: medium;
+  background-color: blue;
+  border-radius: 0.4rem;
+  color: white;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 0.9rem;
+  cursor: pointer;
+}

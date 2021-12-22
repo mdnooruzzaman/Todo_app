@@ -1,0 +1,33 @@
+.register{
+    width: 45%;
+    margin: 0 auto;
+    border-style: solid;
+    border-radius: 2rem;
+    height: max-content;
+    margin-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: linear-gradient( rgb(149, 178, 182), rgb(202, 202, 104));
+}
+.btn2{
+    width: 6.5rem;
+    height: 2.5rem;
+    font-size: medium;
+    background-color: blue;
+    border-radius: 0.4rem;
+    color: white;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.btn2:hover{
+    background-color: rgb(80, 98, 158);
+}
+.reg{
+    margin-bottom: 40px;
+}
+.input_field{
+    input{
+        width: 70%;
+    }
+}
