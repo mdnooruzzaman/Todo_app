@@ -3,28 +3,30 @@ var mysql = require("mysql");
 var bodyParser = require('body-parser')
 var express = require("express");
 
+var dotenv = require("dotenv")
+dotenv.config()
+
 var app = express();
+
+
 
 app.use(express.json());
 //var JsonParser = bodyParser.json();
-app.use(express.urlencoded())
+//app.use(express.urlencoded())
+
+
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "mysql123",
-    database:"todo"
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database:process.env.DATABASE
   });
   
   con.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "Select * from user";
-    con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("Selected");       
-  });
-
+   
 });
 
 //register the new user
@@ -57,6 +59,7 @@ app.get('/api/signin/:id' , (req , res) => {
       }
     })
   });
+
 //handling add operation
 app.post('/home/add' , (req,res) =>{
     
@@ -116,5 +119,6 @@ app.delete('/home/delete/:id' , (req,res) => {
 app.get('/dash' , (req , res) => {
     res.send("Dashboard")
 })
-app.listen("3001")
-console.log("server running on port 3001")
+
+app.listen(process.env.PORT)
+console.log(`server running on port ${process.env.PORT}`)
